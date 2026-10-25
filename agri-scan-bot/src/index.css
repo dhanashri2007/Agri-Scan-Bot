@@ -1,0 +1,342 @@
+@import "tailwindcss";
+
+/* Smooth visual transition between themes */
+.theme-transition,
+.theme-transition div,
+.theme-transition header,
+.theme-transition nav,
+.theme-transition main,
+.theme-transition button,
+.theme-transition card {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.15s ease, box-shadow 0.2s ease;
+}
+
+/* ============================================================
+   THEME 1: HIGH-TECH DARK (NIGHT OPS) - DEFAULT
+   ============================================================ */
+.theme-dark {
+  color-scheme: dark;
+  background-color: #020617;
+  color: #f1f5f9;
+}
+
+/* ============================================================
+   THEME 2: DAYLIGHT CLEAN (LIGHT THEME)
+   High legibility in bright field sunlight
+   ============================================================ */
+.theme-light {
+  color-scheme: light;
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+.theme-light .bg-slate-950 {
+  background-color: #f8fafc !important;
+}
+
+.theme-light .bg-slate-900,
+.theme-light .bg-slate-900\/90,
+.theme-light .bg-slate-900\/80,
+.theme-light .bg-slate-900\/70,
+.theme-light .bg-slate-900\/60,
+.theme-light .bg-slate-900\/50,
+.theme-light .bg-slate-900\/40 {
+  background-color: #ffffff !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+}
+
+.theme-light .bg-slate-800,
+.theme-light .bg-slate-800\/90,
+.theme-light .bg-slate-800\/80,
+.theme-light .bg-slate-800\/70,
+.theme-light .bg-slate-800\/60,
+.theme-light .bg-slate-800\/50,
+.theme-light .bg-slate-800\/40,
+.theme-light .bg-slate-800\/30,
+.theme-light .bg-slate-800\/20 {
+  background-color: #f1f5f9 !important;
+}
+
+.theme-light .hover\:bg-slate-800:hover,
+.theme-light .hover\:bg-slate-700:hover {
+  background-color: #e2e8f0 !important;
+}
+
+.theme-light .border-slate-800,
+.theme-light .border-slate-800\/90,
+.theme-light .border-slate-800\/80,
+.theme-light .border-slate-800\/60,
+.theme-light .border-slate-800\/40,
+.theme-light .border-slate-700,
+.theme-light .border-slate-700\/80,
+.theme-light .border-slate-700\/70,
+.theme-light .border-slate-700\/60 {
+  border-color: #e2e8f0 !important;
+}
+
+.theme-light .text-white,
+.theme-light .text-slate-100 {
+  color: #0f172a !important;
+}
+
+.theme-light .text-slate-200,
+.theme-light .text-slate-300 {
+  color: #334155 !important;
+}
+
+.theme-light .text-slate-400 {
+  color: #64748b !important;
+}
+
+.theme-light .text-slate-500 {
+  color: #64748b !important;
+}
+
+.theme-light .border-emerald-900\/40,
+.theme-light .border-emerald-900\/50,
+.theme-light .border-emerald-900 {
+  border-color: rgba(16, 185, 129, 0.3) !important;
+}
+
+.theme-light .bg-emerald-950\/40,
+.theme-light .bg-emerald-950\/50,
+.theme-light .bg-emerald-950\/60,
+.theme-light .bg-emerald-950\/70,
+.theme-light .bg-emerald-950 {
+  background-color: #ecfdf5 !important;
+}
+
+.theme-light .text-emerald-400 {
+  color: #059669 !important;
+}
+
+.theme-light .text-emerald-300 {
+  color: #047857 !important;
+}
+
+.theme-light input,
+.theme-light select,
+.theme-light textarea {
+  color: #0f172a !important;
+  background-color: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+}
+
+.theme-light input::placeholder,
+.theme-light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* ============================================================
+   THEME 3: WARM EARTH & SAND (MEDIUM COLOR THEME)
+   Soothing medium-tone neutral to eliminate eye strain
+   ============================================================ */
+.theme-medium {
+  color-scheme: dark;
+  background-color: #27221d;
+  color: #f5eedf;
+}
+
+.theme-medium .bg-slate-950 {
+  background-color: #27221d !important;
+}
+
+.theme-medium .bg-slate-900,
+.theme-medium .bg-slate-900\/90,
+.theme-medium .bg-slate-900\/80,
+.theme-medium .bg-slate-900\/70,
+.theme-medium .bg-slate-900\/60,
+.theme-medium .bg-slate-900\/50,
+.theme-medium .bg-slate-900\/40 {
+  background-color: #362f28 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+}
+
+.theme-medium .bg-slate-800,
+.theme-medium .bg-slate-800\/90,
+.theme-medium .bg-slate-800\/80,
+.theme-medium .bg-slate-800\/70,
+.theme-medium .bg-slate-800\/60,
+.theme-medium .bg-slate-800\/50,
+.theme-medium .bg-slate-800\/40,
+.theme-medium .bg-slate-800\/30,
+.theme-medium .bg-slate-800\/20 {
+  background-color: #443c34 !important;
+}
+
+.theme-medium .hover\:bg-slate-800:hover,
+.theme-medium .hover\:bg-slate-700:hover {
+  background-color: #554a40 !important;
+}
+
+.theme-medium .border-slate-800,
+.theme-medium .border-slate-800\/90,
+.theme-medium .border-slate-800\/80,
+.theme-medium .border-slate-800\/60,
+.theme-medium .border-slate-800\/40,
+.theme-medium .border-slate-700,
+.theme-medium .border-slate-700\/80,
+.theme-medium .border-slate-700\/70,
+.theme-medium .border-slate-700\/60 {
+  border-color: #54493f !important;
+}
+
+.theme-medium .text-white,
+.theme-medium .text-slate-100 {
+  color: #fffbeb !important;
+}
+
+.theme-medium .text-slate-200,
+.theme-medium .text-slate-300 {
+  color: #fef3c7 !important;
+}
+
+.theme-medium .text-slate-400 {
+  color: #d6c6b2 !important;
+}
+
+.theme-medium .text-slate-500 {
+  color: #b09f8a !important;
+}
+
+.theme-medium .border-emerald-900\/40,
+.theme-medium .border-emerald-900\/50,
+.theme-medium .border-emerald-900 {
+  border-color: rgba(217, 119, 6, 0.35) !important;
+}
+
+.theme-medium .bg-emerald-950\/40,
+.theme-medium .bg-emerald-950\/50,
+.theme-medium .bg-emerald-950\/60,
+.theme-medium .bg-emerald-950\/70,
+.theme-medium .bg-emerald-950 {
+  background-color: #3d3527 !important;
+}
+
+.theme-medium .text-emerald-400 {
+  color: #34d399 !important;
+}
+
+.theme-medium .text-emerald-300 {
+  color: #6ee7b7 !important;
+}
+
+.theme-medium input,
+.theme-medium select,
+.theme-medium textarea {
+  color: #fffbeb !important;
+  background-color: #443c34 !important;
+  border-color: #5a4f45 !important;
+}
+
+.theme-medium input::placeholder,
+.theme-medium textarea::placeholder {
+  color: #a89a87 !important;
+}
+
+/* ============================================================
+   THEME 4: FOREST MEADOW (DEEP AGRO GREEN)
+   Botanical agricultural robotics palette
+   ============================================================ */
+.theme-forest {
+  color-scheme: dark;
+  background-color: #0b1a12;
+  color: #e8f8ee;
+}
+
+.theme-forest .bg-slate-950 {
+  background-color: #0b1a12 !important;
+}
+
+.theme-forest .bg-slate-900,
+.theme-forest .bg-slate-900\/90,
+.theme-forest .bg-slate-900\/80,
+.theme-forest .bg-slate-900\/70,
+.theme-forest .bg-slate-900\/60,
+.theme-forest .bg-slate-900\/50,
+.theme-forest .bg-slate-900\/40 {
+  background-color: #132a1e !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+}
+
+.theme-forest .bg-slate-800,
+.theme-forest .bg-slate-800\/90,
+.theme-forest .bg-slate-800\/80,
+.theme-forest .bg-slate-800\/70,
+.theme-forest .bg-slate-800\/60,
+.theme-forest .bg-slate-800\/50,
+.theme-forest .bg-slate-800\/40,
+.theme-forest .bg-slate-800\/30,
+.theme-forest .bg-slate-800\/20 {
+  background-color: #1b3929 !important;
+}
+
+.theme-forest .hover\:bg-slate-800:hover,
+.theme-forest .hover\:bg-slate-700:hover {
+  background-color: #244b36 !important;
+}
+
+.theme-forest .border-slate-800,
+.theme-forest .border-slate-800\/90,
+.theme-forest .border-slate-800\/80,
+.theme-forest .border-slate-800\/60,
+.theme-forest .border-slate-800\/40,
+.theme-forest .border-slate-700,
+.theme-forest .border-slate-700\/80,
+.theme-forest .border-slate-700\/70,
+.theme-forest .border-slate-700\/60 {
+  border-color: #244b36 !important;
+}
+
+.theme-forest .text-white,
+.theme-forest .text-slate-100 {
+  color: #f0fdf4 !important;
+}
+
+.theme-forest .text-slate-200,
+.theme-forest .text-slate-300 {
+  color: #dcfce7 !important;
+}
+
+.theme-forest .text-slate-400 {
+  color: #86efac !important;
+}
+
+.theme-forest .text-slate-500 {
+  color: #4ade80 !important;
+}
+
+.theme-forest .border-emerald-900\/40,
+.theme-forest .border-emerald-900\/50,
+.theme-forest .border-emerald-900 {
+  border-color: rgba(52, 211, 153, 0.35) !important;
+}
+
+.theme-forest .bg-emerald-950\/40,
+.theme-forest .bg-emerald-950\/50,
+.theme-forest .bg-emerald-950\/60,
+.theme-forest .bg-emerald-950\/70,
+.theme-forest .bg-emerald-950 {
+  background-color: #0f3321 !important;
+}
+
+.theme-forest .text-emerald-400 {
+  color: #34d399 !important;
+}
+
+.theme-forest .text-emerald-300 {
+  color: #6ee7b7 !important;
+}
+
+.theme-forest input,
+.theme-forest select,
+.theme-forest textarea {
+  color: #f0fdf4 !important;
+  background-color: #1b3929 !important;
+  border-color: #2a583e !important;
+}
+
+.theme-forest input::placeholder,
+.theme-forest textarea::placeholder {
+  color: #79ab8e !important;
+}

@@ -1,0 +1,10 @@
+{
+  "name": "AGRI-SCAN BOT",
+  "description": "AI-Based Mobile Robot for Plant Leaf Disease Detection and Crop Health Monitoring",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

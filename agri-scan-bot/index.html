@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script>
+      // Gracefully suppress benign Vite HMR WebSocket connection errors in cloud/iframe preview environment
+      window.addEventListener('unhandledrejection', function (event) {
+        var reason = event.reason;
+        var msg = (reason && (reason.message || reason.stack || String(reason))) || '';
+        if (
+          msg.includes('WebSocket') ||
+          msg.includes('websocket') ||
+          msg.includes('@vite/client') ||
+          msg.includes('WebSocket closed without opened')
+        ) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+        }
+      }, true);
+
+      window.addEventListener('error', function (event) {
+        var msg = (event && (event.message || '')) || '';
+        var src = (event && (event.filename || '')) || '';
+        if (
+          msg.includes('WebSocket') ||
+          msg.includes('websocket') ||
+          src.includes('@vite/client') ||
+          msg.includes('WebSocket closed without opened')
+        ) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+        }
+      }, true);
+    </script>
+    <title>AGRI-SCAN BOT</title>
+    <meta name="description" content="AI-Based Mobile Robot for Plant Leaf Disease Detection and Crop Health Monitoring" />
+    <meta property="og:title" content="AGRI-SCAN BOT" />
+    <meta property="og:description" content="AI-Based Mobile Robot for Plant Leaf Disease Detection and Crop Health Monitoring" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- PWA Settings -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#065f46" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="AgriScanBot" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png" />
+  </head>
+  <body class="bg-slate-950 text-slate-100 min-h-screen antialiased selection:bg-emerald-600 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then((reg) => console.log('AgriScan ServiceWorker registered:', reg.scope))
+            .catch((err) => console.log('AgriScan ServiceWorker failed:', err));
+        });
+      }
+    </script>
+  </body>
+</html>
+
